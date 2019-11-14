@@ -5,7 +5,7 @@
 2. Beautification: Ritik
 3. Naming conventions: Arjun
 4. Report: Divvij
-5. Finalise txts: Divyash
+
 
 7. Printing cineplex in receipt: Divyesh 
 
