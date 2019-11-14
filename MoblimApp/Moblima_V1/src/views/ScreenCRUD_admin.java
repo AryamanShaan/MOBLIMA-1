@@ -152,7 +152,7 @@ public static void main(String[] args) throws Exception, IOException {
 	public void readAllScreen() {
 		readScreen();
 		System.out.println("Information about screen as follows:");
-		System.out.println("ID		Type	  Cineplex	No of Show Times");
+		System.out.println("ID		Is Screen 3D	  Cineplex	No of Show Times");
 		System.out.println("_________________________________________________________");
 		
 			for(int i=0; i<no_Screen; i++) {
