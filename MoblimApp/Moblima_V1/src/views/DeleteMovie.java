@@ -63,7 +63,7 @@ public class DeleteMovie {
     		    else{ 
     	            System.out.println("Error ..."); 
    		        } 
-    			Path source = Paths.get("C:\\Users\\arjun\\Desktop\\MoblimApp\\Moblima_V1\\MovieTemp.txt");
+    			Path source = Paths.get("MovieTemp.txt");
     			Files.move(source, source.resolveSibling("Movie.txt"));
     			AdminFunctions.main(null);
             }
