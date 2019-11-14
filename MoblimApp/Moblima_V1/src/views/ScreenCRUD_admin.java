@@ -52,8 +52,24 @@ public static void main(String[] args) throws Exception, IOException {
 		}
 			
 			if (choice == 1) {
-				screencrud.createScreen();
-				ScreenCRUD_admin.main(null);
+				int choice2=0;
+				while(true) {
+					System.out.println("!!! Warning: Are you sure you want to continue !!!");
+					System.out.println("If you have any previous saved Data on Screens and Show Times, then it will be deleted");
+					System.out.println("1. Back");
+					System.out.println("2. Continue");
+					choice2= sc.nextInt();
+					if(choice2 == 2) {
+						screencrud.createScreen();
+						ScreenCRUD_admin.main(null);
+					}
+					else if(choice2 == 1) {
+						ScreenCRUD_admin.main(null);
+					}
+					else {
+						continue;
+					}
+				}
 			}
 			
 			if (choice == 2) {
