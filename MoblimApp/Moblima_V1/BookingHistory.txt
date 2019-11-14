@@ -1,8 +1,0 @@
-7243,dsj,12,12-25-2019,Heroes,sf,dsf
-123,f,34,03-04-2019,Heroes,f,f
-7217,Divyesh,13,03-04-2019,Heroes,dvm,564
-5516,Divyesh,89,03-04-2019,Heroes,dvm,546
-3064,DVM,9,03-04-2019,Heroes,hgdj,647
-3788,Ritik,78,03-04-2019,Heroes,tyu,5
-6586,Shaan,12,12-12-2019,Superman,ghsdjfg,90046143
-7636,Ritik,19,12-12-2019,Superman,ritik001@e.ntu.edu.sg,85154610
