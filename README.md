@@ -7,7 +7,7 @@
 4. Report: Divvij
 
 
-7. Printing cineplex in receipt: Divyesh 
+
 
 9. Video: Everyone on meet up
 10. Complete code nnd deliverable
