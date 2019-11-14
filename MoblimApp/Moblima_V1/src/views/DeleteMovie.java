@@ -13,6 +13,9 @@ public class DeleteMovie {
         int i = 1;
     
         try {
+            System.out.println("-----------------------------------");
+            System.out.println("Delete Movie");
+            System.out.println("-----------------------------------");
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader); 
             while((line = bufferedReader.readLine()) != null) {
@@ -57,7 +60,8 @@ public class DeleteMovie {
     			br.close();
     			fr.close();
     			
-    			if(file_old.delete()){ 
+    			if(file_old.delete()){
+    				   System.out.println();
     		           System.out.println("Movie deleted successfully!"); 
    		        } 
     		    else{ 

@@ -14,9 +14,6 @@ public class UserFunctions {
 			
 			int choice = -1;
 			while(choice > 7 || choice < 0) {
-				System.out.println("-----------------------------------");
-				System.out.println("User Module");
-				System.out.println("-----------------------------------");
 				System.out.println("1. Search for a movie");
 				System.out.println("2. View movie details (rating included)");
 				System.out.println("3. Check seat availability, book and purchase tickets");
@@ -24,7 +21,7 @@ public class UserFunctions {
 				System.out.println("5. List top 5 ranking by overall rating");
 				System.out.println("6. Go Back");
 				System.out.println("7. Exit");
-				System.out.print("Please enter your choice: ");
+				System.out.println("Please enter your choice: ");
 				choice = sc.nextInt();
 				System.out.println();
 			}

@@ -20,9 +20,9 @@ public class SearchMovie {
         String fileName = "Movie.txt";
         String line = null;
         int i = 1;
-        System.out.println("-----------------------------");
-        System.out.println("MOVIES PRESENT IN THE DATABASE");
-        System.out.println("-----------------------------");
+        System.out.println("-----------------------------------");
+        System.out.println("Movies present in the database");
+        System.out.println("-----------------------------------");
         try {
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader); 

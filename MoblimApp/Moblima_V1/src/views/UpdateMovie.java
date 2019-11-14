@@ -22,6 +22,9 @@ public class UpdateMovie {
         int i = 1;
     
         try {
+            System.out.println("-----------------------------------");
+            System.out.println("Update Movie");
+            System.out.println("-----------------------------------");
             FileReader fileReader = new FileReader(fileName);
             BufferedReader bufferedReader = new BufferedReader(fileReader); 
             while((line = bufferedReader.readLine()) != null) {
@@ -57,9 +60,9 @@ public class UpdateMovie {
                     	String[] oldString = line.split(",");
                     	System.out.println(Arrays.toString(oldString));
                     	String newPart, newFinal;
-                    	System.out.println("-------------------------------------------");
+                    	System.out.println();
                     	System.out.println("Press enter if no updates for the category!");
-                    	System.out.println("-------------------------------------------");
+                    	System.out.println();
                     	System.out.println("Movie Name:");
                     	newPart = in.nextLine();
                     	if(newPart.isEmpty()) {
@@ -69,6 +72,7 @@ public class UpdateMovie {
                     		newFinal = newPart;
                     	}
                     	
+                    	System.out.println();
                     	System.out.println("Movie Type:");
                 		System.out.println("1: Blockbuster");
                 		System.out.println("2: Action");
@@ -91,6 +95,7 @@ public class UpdateMovie {
                 			newFinal = newFinal + "," + newPart;
                 		}
                 		
+                		System.out.println();
                 		System.out.println("Movie Status: ");
                 		System.out.println("1: Coming soon!");
                 		System.out.println("2: Preview");
@@ -111,6 +116,7 @@ public class UpdateMovie {
                 			newFinal = newFinal + "," + newPart;
                 		}
                 		
+                		System.out.println();
                 		System.out.println("Movie Rating: ");
                 		System.out.println("1: G");
                 		System.out.println("2: PG13");
@@ -129,6 +135,7 @@ public class UpdateMovie {
                 			newFinal = newFinal + "," + newPart;
                 		}
                 		
+                		System.out.println();
                 		System.out.println("Movie Synopsis: ");
                 		newPart = in.nextLine();
                 		if(newPart.isEmpty()) {
@@ -138,6 +145,7 @@ public class UpdateMovie {
                 			newFinal = newFinal + "," + newPart;
                 		}
                 		
+                		System.out.println();
                 		System.out.println("Movie Director: ");
                 		newPart = in.nextLine();
                 		if(newPart.isEmpty()) {
@@ -165,7 +173,8 @@ public class UpdateMovie {
     			fr.close();
     			
     			if(file_old.delete()){ 
-    		           System.out.println("Movie updated successfully!"); 
+    		           System.out.println("Movie updated successfully!");
+    		           System.out.println();
    		        } 
     		    else{ 
     	            System.out.println("Error ..."); 

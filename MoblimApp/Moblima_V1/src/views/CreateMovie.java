@@ -17,8 +17,13 @@ public class CreateMovie {
 		String[] movieCast; // need to have 2 or more cast members of the movie
 		String temp; String tempString;
 		
+		System.out.println("-----------------------------------");
+		System.out.println("Create Movie");
+		System.out.println("-----------------------------------");
+		
 		System.out.print("Movie Name: ");
 		movieName = sc.nextLine();
+		System.out.println();
 		
 		System.out.println("Movie Type:");
 		System.out.println("1: Blockbuster");
@@ -35,7 +40,7 @@ public class CreateMovie {
 		case 5: movieType = "Horror"; break;
 		default: movieType = "Not defined"; 
 		}
-		
+		System.out.println();
 		System.out.println("Movie Status: ");
 		System.out.println("1: Coming soon!");
 		System.out.println("2: Preview");
@@ -50,6 +55,7 @@ public class CreateMovie {
 		default: movieStatus = "Not defined"; 
 		}
 		
+		System.out.println();
 		System.out.println("Movie Rating: ");
 		System.out.println("1: G");
 		System.out.println("2: PG13");
@@ -62,18 +68,21 @@ public class CreateMovie {
 		default: movieRating = "Not defined";
 		}
 		
-
+		System.out.println();
 		System.out.println("Movie Director: ");
 		movieDirector = sc.nextLine();
 		
+		System.out.println();
 		System.out.println("Movie Cast (Separate cast by commas): ");
 		tempString = sc.nextLine();
 		movieCast = tempString.split("\\s*,\\s*");
 		
+		System.out.println();
 		System.out.print("Movie Synopsis: ");
 		movieSynopsis = sc.nextLine();
 		
 		MovieCreate.WriteMovie(movieName, movieType, movieStatus, movieRating, movieSynopsis, movieDirector, movieCast);
+		System.out.println();
 		AdminFunctions.main(null);
 	}
 

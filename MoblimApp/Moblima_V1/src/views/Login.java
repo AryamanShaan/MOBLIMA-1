@@ -18,7 +18,9 @@ public class Login {
 			System.out.print("Password: ");
 			pass = sc.next();
 		} while(x.checkLogin(id, pass) == -1);
+		System.out.println();
 		AdminFunctions.main(null);
+		System.out.println();
 		sc.close();
 	}
 

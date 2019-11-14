@@ -10,6 +10,11 @@ public class MovieDetails {
 	 
 	public static void main(String[] args) throws Exception{
 		Scanner sc_input = new Scanner(System.in);
+		
+		System.out.println("-----------------------------------");
+		System.out.println("Movie Details");
+		System.out.println("-----------------------------------");
+		
 		//take query by user
 		System.out.println("Enter the movie name to know its details:");
 		String movie_query = sc_input.nextLine();
@@ -86,4 +91,3 @@ public class MovieDetails {
 	}
 	
 }
-	

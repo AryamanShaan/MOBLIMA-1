@@ -74,8 +74,9 @@ public class Top5List {
 			}
 		}
 		
-		System.out.println();
-		System.out.println("Top 5 movies according to ratings are:");
+		System.out.println("-----------------------------------");
+		System.out.println("Top 5 movies according to rating");
+		System.out.println("-----------------------------------");
 		
 		//remaining printing
 		for(int i = 0; i < 5; i++) {
@@ -83,6 +84,5 @@ public class Top5List {
 			System.out.println(max_ratings[i]); 
 		}
 		System.out.println();
-		//close scanner streams
 	}
 }

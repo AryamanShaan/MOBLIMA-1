@@ -12,11 +12,14 @@ public class Main {
 		
 		int choice = -1;
 		Scanner sc = new Scanner(System.in);
+		System.out.println("-----------------------------------");
+		System.out.println("MOBLIMA");
+		System.out.println("-----------------------------------");
 		
 		System.out.println("1: Admin Module");
 		System.out.println("2: User Module");
 		System.out.println("3: Exit");
-		System.out.print("Please the module you want to access: ");
+		System.out.print("Please enter the module you want to access: ");
 		choice = sc.nextInt();
 		
 		while(choice > 3 || choice < 0) {
@@ -28,6 +31,7 @@ public class Main {
 			choice = sc.nextInt();
 		}
 		
+		System.out.println();
 		
 		if (choice == 1) {
 			Login.main(null);
