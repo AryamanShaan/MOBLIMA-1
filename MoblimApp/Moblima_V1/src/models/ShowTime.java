@@ -87,7 +87,39 @@ public class ShowTime implements java.io.Serializable{
 
 	public void view_layout_booked(){
 
+		System.out.print("   ");
+		for(int i = 0; i<numOfColumns; i++){
+			if(i<9) {
+				System.out.print(i+"  ");
+			}
+				
+			if(i==3) {
+				System.out.print("  ");
+			}
+				
+			if(i>=9) {
+				System.out.print(i+" ");
+			}
+				
+			if(i==15) {
+				System.out.print("  ");
+			}
+				
+		}
+		System.out.println();
+	
+		
+		
 		for(int i = 0; i<numOfRows; i++){
+			
+			if(i<10) {
+				System.out.print(i+" ");
+			}
+				
+			if(i>=10) {
+				System.out.print(i);
+			}
+				
 			for(int j =0 ; j<numOfColumns; j++){
 
 					if(seat_layout[i][j].isBooked() == false){
@@ -96,11 +128,20 @@ public class ShowTime implements java.io.Serializable{
 					else{
 						System.out.print("[x]");
 					}
-
+						
+					if(j==15) {
+						System.out.print("  ");
+					}
+					if(j==3) {
+						System.out.print("  ");
+					}
+						
 			}
 			System.out.println();
 		}
 	}
+	
+	
 	
 	
 	
