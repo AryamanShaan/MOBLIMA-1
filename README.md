@@ -10,5 +10,5 @@
 
 
 9. Video: Everyone on meet up
-10. Complete code nnd deliverable
+
 
