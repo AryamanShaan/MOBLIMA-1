@@ -27,9 +27,11 @@ public class MovieDetails {
 				System.out.println("Movie name: "+x[0]);
 				System.out.println("Genre: "+x[1]);
 				System.out.println("Release details: "+x[2]);
-				System.out.println("Category: "+x[3]);
+				System.out.println("Age restrictions: "+x[3]);
+				System.out.println("Synopsis: " +x[4]);
+				System.out.println("Movie director: " +x[5]);
 				//Array.copyOfRange to take sub-array
-				System.out.println("Cast: "+String.join(", ",Arrays.copyOfRange(x, 4, x.length)));
+				System.out.println("Cast: "+String.join(", ",Arrays.copyOfRange(x, 6, x.length)));
 				break;
             }
         }   
