@@ -131,6 +131,12 @@ public static void main(String[] args) throws Exception {
 					System.out.println();
 					arr_Screen[ID-1].arr_Show_time[i].view_layout_booked();
 					System.out.println();
+					System.out.println("---------------------------------------");
+					System.out.println("Platinum Class : Rows 1 - 3");
+					System.out.println("Gold Class     : Rows 4 - 9");
+					System.out.println("Silver Class   : Rows 10- 15");
+					System.out.println("---------------------------------------");
+					System.out.println();
 					System.out.println("Enter row");
 					row = sc.nextInt();
 					System.out.println("Enter column");
