@@ -92,7 +92,7 @@ public class Movie {
 		return this.movieSales;
 	}
 	
-	public boolean check3D(String a) throws IOException {
+	public static boolean check3D(String a) throws IOException {
 		String fileName = "Movie.txt";
 		String line;
 		FileReader fileReader = new FileReader(fileName);
