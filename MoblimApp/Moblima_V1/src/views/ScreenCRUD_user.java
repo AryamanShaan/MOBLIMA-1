@@ -27,16 +27,21 @@ public static void main(String[] args) throws Exception {
 		
 		ScreenCRUD_user screencrud = new ScreenCRUD_user();
 		System.out.println();
+		System.out.println("------------------------------------");
+		System.out.println("Show Times & Booking Seats");
+		System.out.println("------------------------------------");
 		System.out.println("1: View All Show Times");
 		System.out.println("2: Book Seats");
 		System.out.println("3: Go Back");
 		System.out.print("Please enter an option: ");
-		System.out.println();
 		choice = sc.nextInt();
 		
 		while(choice > 3 || choice < 1) {
 			
 			System.out.println();
+			System.out.println("------------------------------------");
+			System.out.println("Show Times & Booking Seats");
+			System.out.println("------------------------------------");
 			System.out.println("1: View All Show Times");
 			System.out.println("2: Book Seats");
 			System.out.println("Enter 0 to Exit");
@@ -69,10 +74,11 @@ public static void main(String[] args) throws Exception {
 		for(i=0; i< no_Screen; i++) {
 			
 			if(arr_Screen[i].get_no_Show_time()!=0) {
-				System.out.println("Show Times for Screen ID: "+(i+1)+ " are...");
+				System.out.println("Show Times for Screen ID: "+(i+1)+ " are: ");
+				System.out.println("---------------------------------------------------------");
 				
 				for(j=0; j< arr_Screen[i].get_no_Show_time(); j++) {
-					System.out.print("ID:	"+ arr_Screen[i].arr_Show_time[j].get_ID()+"; ");
+					System.out.print("Show Time ID:	"+ arr_Screen[i].arr_Show_time[j].get_ID()+"; ");
 					System.out.print("movie: "+ arr_Screen[i].arr_Show_time[j].get_movie()+"; ");
 					System.out.print("Date: "+ arr_Screen[i].arr_Show_time[j].get_date()+"; ");
 					System.out.print(" Time: "+ arr_Screen[i].arr_Show_time[j].get_time()+"; ");
