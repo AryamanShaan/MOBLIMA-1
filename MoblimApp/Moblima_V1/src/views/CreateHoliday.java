@@ -2,43 +2,52 @@ package views;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
-
 import controllers.HolidayCreate;
-public class CreateHoliday {
 
+/**
+ * This view creates a Holiday in the specified format
+ * @author Anon
+ *
+ */
+public class CreateHoliday {
+	
+	/**
+	 * This function checks if the date entered 
+	 * is in a valid format
+	 * @param strDate Date whose format needs to be checked
+	 * @return boolean value indicating if the date is entered in correct format
+	 */
 	public static boolean validateJavaDate(String strDate)
-	   {
-		/* Check if date is 'null' */
+	   {		
 		if (strDate.trim().equals(""))
 		{
 		    return true;
 		}
-		/* Date is not 'null' */
 		else
 		{
-		    /*
-		     * Set preferred date format,
-		     * For example MM-dd-yyyy, MM.dd.yyyy,dd.MM.yyyy etc.*/
+		    
 		    SimpleDateFormat sdfrmt = new SimpleDateFormat("MM/dd/yyyy");
 		    sdfrmt.setLenient(false);
-		    /* Create Date object
-		     * parse the string into date 
-	             */
+		    
 		    try
 		    {
-		        Date javaDate = sdfrmt.parse(strDate); 
-		        //System.out.println(strDate+" is valid date format");
-		    }
-		    /* Date format is invalid */
+		        Date javaDate = sdfrmt.parse(strDate); 		        
+		    }		    
 		    catch (ParseException e)
-		    {
-		        //System.out.println(strDate+" is Invalid Date format");
+		    {		        
 		        return false;
-		    }
-		    /* Return true if date format is valid */
+		    }		    
 		    return true;
 		}
 	   }
+	
+	/**
+	 * Main function that transfers the control of the 
+	 * program to the controller HolidayCreate for writing
+	 * into the file Holiday.txt
+	 * @param args 
+	 * @throws Exception
+	 */
 	
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
@@ -57,3 +66,4 @@ public class CreateHoliday {
 	}
 
 }
+
