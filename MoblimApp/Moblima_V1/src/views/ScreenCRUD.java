@@ -16,10 +16,21 @@ import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
+/**
+ * This Class helps in Object Serialization to store an array of Screens (Cinemas) in 'Screen.txt'
+ * @author Anon
+ *
+ */
 public class ScreenCRUD {
 	
-
+	/**
+	 * This is a constant to fix the number of Screens (Cinemas) to 9 throughout the Sytem
+	 */
 	protected final int no_Screen=9;        // fixed number of screens system-wide
+	
+	/**
+	 * This is the Array of Screens (Cinemas) on which all CRUD operations are performed. This Array is used to read and write data into 'Screen.txt'
+	 */
 	protected Screen[] arr_Screen = new Screen[no_Screen];  
 	
 	
@@ -27,6 +38,9 @@ public class ScreenCRUD {
 	
 	// one function to write in array (return type is array)
 	
+	/** 
+	 * Writes contents of arr_Screen[] into 'Screen.txt' by serialization 
+	 */
 	public void writeScreen() {
 		
 		String filename = "Screen.txt";
@@ -60,6 +74,9 @@ public class ScreenCRUD {
 	
 	// one function to read in array  (return type is array)
 	
+	/**
+	 * Reads contents of 'Screen.txt' into arr_Screen[] by deserialization 
+	 */
 	public void readScreen() {
 		
 		int i=0;
