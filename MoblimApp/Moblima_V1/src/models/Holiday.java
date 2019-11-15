@@ -5,44 +5,57 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * This is a class used for defining Holiday objects
+ * @author Anon
+ *
+ */
 public class Holiday {
+	
+	/**
+	 * This is the name of the Holiday
+	 */
     private String name;
+    
+    /**
+     * This is the Date object indicating the date of the Holiday
+     */
     private Date date;
-    private double rate;
+    
+    /**
+     * This class initializes the values of Holiday object parameters
+     * @param name name of the Holiday
+     * @param date Date on which a Public Holiday falls 
+     */
 	
-	
-	public Holiday(String name, Date date, double rate) {
+	public Holiday(String name, Date date) {
         this.name = name;
         this.date = date;
-        this.rate = rate;
     }
 	
+	/**
+	 * Gets the Name of the Public Holiday
+	 * @return Name of the Public Holiday
+	 */
 	 public String getName() {
         return name;
     }
 	
+	/**
+	 * Gets the Date of the Public Holiday
+	 * @return Date of the Public Holiday
+     */
 	public Date getDate() {
         return date;
     }
 	
-	public double getRate() {
-        return rate;
-    }
-	
-	public String printDetail() {
-        return "Date      : " + formatTimeMMdd(date) + "\n" +
-                "Price rate: " + rate;
-    }
-
-    //@Override
-    public String toString() {
-        return name + " (" + formatTimeMMdd(date) + ")";
-    }
-
-	
-	 public static String formatTimeMMdd(Date time) {
-	        return new SimpleDateFormat("MMMM, dd").format(time);
-	    }
+	/**
+	 * This function checks if a given date is in the
+	 * Holiday.txt file and returns a boolean value
+	 * @param date Date to be checked for a Public Holiday
+	 * @return boolean value indicating if the date is a holiday or not
+	 * @throws IOException
+	 */
 	 
 	 public static boolean checkHoliday(String date) throws IOException{
 		 try {
@@ -69,3 +82,4 @@ public class Holiday {
 	 
 	
 }
+
