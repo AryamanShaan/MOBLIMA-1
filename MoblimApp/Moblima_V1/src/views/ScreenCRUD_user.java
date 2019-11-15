@@ -159,7 +159,7 @@ public static void main(String[] args) throws Exception {
 		}
 		
 		if(!flag1 && !flag2) {
-			Booking book = new Booking(row, col, arr_Screen[ID-1].arr_Show_time[i].get_movie(), arr_Screen[ID-1].get_screenID(), arr_Screen[ID-1].get_screenType(),arr_Screen[ID-1].arr_Show_time[i].get_date());
+			Booking book = new Booking(row, col, arr_Screen[ID-1].arr_Show_time[i].get_movie(), arr_Screen[ID-1].get_screenID(), arr_Screen[ID-1].get_screenType(),arr_Screen[ID-1].arr_Show_time[i].get_date(),arr_Screen[ID-1].get_cineplexType());
 			book.promptCustomerInformation();
 			book.printBookingDetail();
 			book.computeTotalPrice();
