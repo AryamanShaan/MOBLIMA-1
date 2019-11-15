@@ -18,8 +18,21 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.text.ParseException;
 
+/**
+ * This View Class is used for the User to view available Show Time and Book Seats
+ * 
+ * @author Anon
+ *
+ */
 public class ScreenCRUD_user extends ScreenCRUD{
 	
+
+/**
+* The main function of this View
+* 
+* @param args
+* @throws Exception
+*/
 public static void main(String[] args) throws Exception {
 		
 		int choice = -1;
@@ -66,6 +79,9 @@ public static void main(String[] args) throws Exception {
 			
 	}
 
+	 /**
+          * Reads out all the Show Times of a Screen(Cinema) with its details
+          */
 	public void readShowTime() {
 		readScreen();
 		
@@ -91,6 +107,12 @@ public static void main(String[] args) throws Exception {
 		writeScreen();
 	}
 	
+	/**
+	 * Books Seats for a Show Time and takes details from the User to do the same
+	 * 
+	 * @throws ParseException
+	 * @throws IOException
+	 */
 	public void bookSeats() throws ParseException, IOException {
 		readScreen();
 		
