@@ -49,7 +49,7 @@ public class Seat implements java.io.Serializable{
 	}
 
 	/**
-	 * 
+	 * Returns the seat's status (booked or not)
 	 * @return this seat's booked/ not booked status as boolean
 	 */
 	public boolean isBooked(){
@@ -57,7 +57,7 @@ public class Seat implements java.io.Serializable{
 	}
 
 	/**
-	 * 
+	 * Returns the integer value of the row
 	 * @return this seat's row integer value
 	 */
 	public int get_row(){
@@ -65,7 +65,7 @@ public class Seat implements java.io.Serializable{
 	}
 
 	/**
-	 * 
+	 * Returns the integer value of the column
 	 * @return this seat's column integer value
 	 */
 	public int get_col(){
