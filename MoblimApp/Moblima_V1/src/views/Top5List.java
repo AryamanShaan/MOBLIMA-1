@@ -3,19 +3,35 @@ package views;
 import java.io.*;
 import java.util.*;
 
+/**
+ * Used to display the top 5 movies according to their rating
+ * @author Anon
+ *
+ */
 public class Top5List {
-
+	
+	/**
+	 * The main function for this view
+	 * @param args for the main function
+	 * @throws IOException to throw the exception
+	 */
 	public static void main(String[] args) throws IOException {
-		/*
-		//open file
-		File file = new File("review.txt");
-		Scanner sc = new Scanner(file);
-		
-		*/
+
 		Scanner sc_input = new Scanner(System.in);
-		//create hash maps for sum of movie ratings, number of ratings and average rating
+		
+		/**
+		 * hashmap to track the sum of the movie ratings
+		 */
 		HashMap<String,Double> movieRatingsSum = new HashMap<String,Double>();
+		
+		/**
+		 * hashmap to track the number of the review
+		 */
 		HashMap<String,Integer> reviewNumber = new HashMap<String,Integer>();
+		
+		/**
+		 * hashmap to track the sum of movie ratings
+		 */
 		HashMap<String,Double> movieRatingsAvg = new HashMap<String,Double>();
 		
 		
@@ -86,3 +102,4 @@ public class Top5List {
 		System.out.println();
 	}
 }
+
