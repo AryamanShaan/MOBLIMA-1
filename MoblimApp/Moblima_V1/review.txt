@@ -1,8 +1,0 @@
-Batman,Ritik,4.2
-Batman,Arjun,4.6
-Degree Audit,Divyesh,2.0
-Hello,Ritik,2.1
-Housefull,Ritik,3.5
-Dhamaal,Ritik,5.0
-Hello,Arjun,2.5
-Dark Knight,Ritik,1.1
