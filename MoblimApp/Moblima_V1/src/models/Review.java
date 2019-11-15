@@ -3,16 +3,45 @@ package models;
 import java.util.*;
 import java.io.File;
 
+/**
+ * Represents the ratings for a movie
+ * @author Anon
+ *
+ */
 public class Review {
 	
-	//declaring all the variables for a particular review
+	/**
+	 * The movie that is being considered
+	 */
 	private final Movie MOVIE;
+	
+	/**
+	 * Date on when it is reviewed
+	 */
 	private final Date REVIEWED_ON;
+	
+	/**
+	 * The rating for the movie
+	 */
 	private final int RATING;
+	
+	/**
+	 * The name of the reviewer
+	 */
 	private final String REVIEWER;
+	
+	/**
+	 * The review itself
+	 */
 	private final String DESCRIPTION;
 	
-	//constructor to initialise the variables
+	/**
+	 * To create the review for the movie
+	 * @param movie the movie being reviewed
+	 * @param rating rating for the movie
+	 * @param reviewer name of the reviewer
+	 * @param description the review itself
+	 */
 	public Review(Movie movie, int rating, String reviewer, String description) {
 		this.MOVIE = movie;
 		this.RATING = rating;
@@ -21,29 +50,46 @@ public class Review {
 		this.REVIEWED_ON = new Date();
 	}
 	
-	//function to return the movie being reviewed
+	/**
+	 * Get the movie being reviewed
+	 * @return the movie
+	 */
 	public Movie getMovie() {
 		return MOVIE;
 	}
 	
-	//function to return the date on which the movie is reviewed
+	/**
+	 * Get the date on which the movie is reviewed
+	 * @return the date on which the movie is reviewed
+	 */
 	public Date getReviewedOn() {
 		return REVIEWED_ON;
 	}
 	
-	//function to return the reviewer name
+	/**
+	 * Get the name of the reviewer
+	 * @return the name of the reviewer
+	 */
 	public String getReviewer() {
 		return REVIEWER;
 	}
 	
-	//function to return the description of the review by the reviewer
+	/**
+	 * get the review
+	 * @return the review for the movie
+	 */
 	public String getDescription() {
 		return DESCRIPTION;
 	}
 	
-	//function to return the rating of the movie by the reviewer
+	/**
+	 * Get the rating for the movie
+	 * @return the rating for the movie
+	 */
 	public int getRating() {
 		return RATING;
 	}
 }
+
+
 
