@@ -20,7 +20,7 @@ public class Booking {
     private String date;
     private int screen_id;
     private String cineplex;
-    private int TID;
+    private String TID;
     private double GST;
     private double totalPrice;
     private int row;
@@ -30,6 +30,8 @@ public class Booking {
     private int age;
     private boolean is3D;
     private int price3D =0;
+    private double seatChoice = 0;
+    
     
    
     public Booking(int row, int col, String movie , int screen_id, boolean isScreen3d1, String date, String cineplex) throws ParseException, IOException {
@@ -108,18 +110,14 @@ public class Booking {
         customer = new Customer(name, age, mobile, email, isSeniorCitizen, isStudent);
         generateTID();
         writeBookingHistory(customer);
-        //boolean isSeniorCitizen = Confirm("Are you a senior citizen (Age > 60) ? Enter Y if yes (validation will be done upon entering):");
-        //boolean isSeniorCitizen = Confirm("Please enter your age: ");
-        //boolean isStudent = Confirm("Are you a student (8 < Age < 25 )? Enter Y if yes (validation will be done upon entering):");
-        //boolean isStudent = Confirm1("Please Enter your age");
-      
+        
         
     }
     
     
     public void generateTID() {
     	Random r = new Random();
-        TID = screen_id + (r.nextInt(10000)+1);
+        TID = cineplex.toUpperCase().substring(0,3)+new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
     }
     
     public void computeTotalPrice() {
@@ -127,8 +125,6 @@ public class Booking {
         if (customer.isSeniorCitizen()) basePrice *= 0.5;
         else if (customer.isStudent()) basePrice *= 0.8;
         GST = round((basePrice + 2) * 0.07, 2);
-        if(is3D) price3D = 2;
-        totalPrice = round(basePrice + 2 + GST + price3D, 2);
         if (customer.isSeniorCitizen()) {
         	System.out.println("50% off for senior citizen");
         }
@@ -146,8 +142,25 @@ public class Booking {
         System.out.println("Booking fee       : 2.0");
         if (is3D) 
         {
-        	System.out.println("3D Screen price  :2.0");
+        	System.out.println("3D Screen price   : 2.0");
         }
+        if(0 < row && row < 4) 
+        {
+        	seatChoice = 2.5;
+        	System.out.println("Platinum Seat Price: 2.5");
+        }
+        else if(3 < row && row < 10)
+        {
+        	seatChoice = 1.5;
+        	System.out.println("Gold Seat Price   : 1.5");
+        }
+        else if(9 < row && row < 16)
+        {
+        	seatChoice = 0.5;
+        	System.out.println("Silver Seat Price : 0.5");
+        }
+        if(is3D) price3D = 2;
+        totalPrice = round(basePrice + 2 + GST + price3D +seatChoice, 2);
         System.out.println("GST               : " + GST);
         System.out.println("Grand total       : " + totalPrice);
         System.out.println("Transaction ID    : " + TID);
@@ -210,8 +223,3 @@ public class Booking {
     
     
 }
-
-
-
-
-
