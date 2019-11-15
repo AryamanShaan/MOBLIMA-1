@@ -84,6 +84,7 @@ public static void main(String[] args) throws Exception {
 					System.out.print(" Time: "+ arr_Screen[i].arr_Show_time[j].get_time()+"; ");
 					System.out.println();
 				}
+			System.out.println();
 			}
 		}
 		
