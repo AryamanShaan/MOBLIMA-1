@@ -3,12 +3,24 @@ package views;
 import java.util.*;
 import java.io.*;
 
+/**
+ * Displays the user interface for the user module
+ * @author Anon
+ *
+ */
 public class UserFunctions {
-
+	
+	/**
+	 * The main function for this view
+	 * @param args for the main function
+	 * @throws Exception to throw the exception
+	 */
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		
-		//variable to keep track of when to exit the user module
+		/**
+		 * to keep track of when to exit the used module
+		 */
 		int exit = 0;
 		while(exit != 1) {
 			
@@ -22,9 +34,8 @@ public class UserFunctions {
 				System.out.println("3. Check seat availability, book and purchase tickets");
 				System.out.println("4. View Booking History");
 				System.out.println("5. List top 5 ranking by overall rating");
-				System.out.println("6. Enter rating for a movie");
-				System.out.println("7. Go Back");
-				System.out.println("8. Exit");
+				System.out.println("6. Go Back");
+				System.out.println("7. Exit");
 				System.out.print("Please enter your choice: ");
 				choice = sc.nextInt();
 				System.out.println();
@@ -40,11 +51,9 @@ public class UserFunctions {
 				BookingHistory.main(null);
 			}else if(choice == 5) {
 				Top5List.main(null);
-			}else  if(choice == 6) {
-				Review.main(null);
-			}else if(choice == 7){
+			}else if(choice == 6){
 				Main.main(null);
-			}else if(choice == 8) {
+			}else if(choice == 7) {
 				exit = 1;
 			}
 		}
@@ -53,3 +62,4 @@ public class UserFunctions {
 	}
 
 }
+
