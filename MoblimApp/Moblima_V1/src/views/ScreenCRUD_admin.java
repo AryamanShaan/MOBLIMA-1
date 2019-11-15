@@ -16,10 +16,23 @@ import models.*;
 import java.util.*;
 import java.io.*;
 
+/**
+ * This View Class is used by the Admin to create/delete/read Screens (Cinemas) and Show Times
+ * 
+ * @author Anon
+ *
+ */
 public class ScreenCRUD_admin extends ScreenCRUD{
 	
 	
-	
+/**
+ * 
+ * This is the main function of ScreenCRUD_admin
+ * 
+ * @param args
+ * @throws Exception
+ * @throws IOException
+ */
 public static void main(String[] args) throws Exception, IOException {
 		
 		int choice = -1;
@@ -108,7 +121,10 @@ public static void main(String[] args) throws Exception, IOException {
 		
 	}
 
-
+	/**
+	 * Creates and overwrites all 9 Screens (Cinemas) at once taking their details
+	 * 
+	 */
 	public void createScreen() {
 		
 			
@@ -173,6 +189,9 @@ public static void main(String[] args) throws Exception, IOException {
         	return false;
         }
     }
+	/**
+	 * Displays all Screens (Cinemas) and related details
+	 */
 	public void readAllScreen() {
 		readScreen();
 		System.out.println("Information about screen as follows:");
@@ -191,7 +210,9 @@ public static void main(String[] args) throws Exception, IOException {
 	}
 	
 	
-	
+	/**
+	 * Displays all Show Times of all Screens (Cinemas) along with their details
+	 */
 	public void displayShow_Time() {
 		readScreen();
 		
@@ -219,7 +240,11 @@ public static void main(String[] args) throws Exception, IOException {
 		writeScreen();
 	}
 	
-	
+	/**
+	 * Adds a Show Time to a particular Screen (Cinema) provided no date and time clash with pre-existing Show Time
+	 * @throws IOException
+	 * @throws Exception
+	 */
 	public void addShow_Time() throws IOException, Exception {
 		readScreen();
 		int j;
@@ -371,7 +396,9 @@ public static void main(String[] args) throws Exception, IOException {
 	}
 	
 	
-	
+	/**
+	 * Deletes a Show Time from a particular Screen (Cinema) 
+	 */
 	public void deleteShow_Time() {
 		readScreen();
 		
