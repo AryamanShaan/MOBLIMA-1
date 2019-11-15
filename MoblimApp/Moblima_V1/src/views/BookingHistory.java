@@ -6,8 +6,18 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
+/**
+ * This is the view which writes data to the BookingHistory text file
+ * @author Anon
+ *
+ */
 public class BookingHistory {
 
+	/**
+	 * Main program controlling the flow of writing parameters to BookingHistory file
+	 * @param args
+	 * @throws Exception
+	 */
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		String choice, line;
@@ -42,3 +52,4 @@ public class BookingHistory {
 	}
 
 }
+
