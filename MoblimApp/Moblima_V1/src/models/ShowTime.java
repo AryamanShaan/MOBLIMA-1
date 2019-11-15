@@ -3,7 +3,7 @@ package models;
 /**
  * Represents a particular Show Time
  * 
- * @author Shaan
+ * @author Anon
  *
  */
 public class ShowTime implements java.io.Serializable{
