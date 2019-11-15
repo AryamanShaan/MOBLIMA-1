@@ -27,6 +27,9 @@ public static void main(String[] args) throws Exception, IOException {
 		
 		ScreenCRUD_admin screencrud = new ScreenCRUD_admin();
 		System.out.println();
+		System.out.println("------------------------------------");
+		System.out.println("CRUD Seat & Show Times Listing");
+		System.out.println("------------------------------------");
 		System.out.println("1: Create 9 Screen");
 		System.out.println("2: List all Screens");
 		System.out.println("3: List All Show Times of a Screen");
@@ -40,6 +43,9 @@ public static void main(String[] args) throws Exception, IOException {
 		while(choice > 6 || choice < 1) {
 			
 			System.out.println();
+			System.out.println("------------------------------------");
+			System.out.println("CRUD Seat & Show Times Listing");
+			System.out.println("------------------------------------");
 			System.out.println("1: Create 9 Screen");
 			System.out.println("2: List all Screens");
 			System.out.println("3: List All Show Times of a Screen");
@@ -54,10 +60,12 @@ public static void main(String[] args) throws Exception, IOException {
 			if (choice == 1) {
 				int choice2=0;
 				while(true) {
+					System.out.println("-----------------------------------------------------------------------------------------");
 					System.out.println("!!! Warning: Are you sure you want to continue !!!");
 					System.out.println("If you have any previous saved Data on Screens and Show Times, then it will be deleted");
 					System.out.println("1. Back");
 					System.out.println("2. Continue");
+					System.out.println("-----------------------------------------------------------------------------------------");
 					choice2= sc.nextInt();
 					if(choice2 == 2) {
 						screencrud.createScreen();
@@ -157,11 +165,11 @@ public static void main(String[] args) throws Exception, IOException {
         Scanner sc = new Scanner(System.in);
         //System.out.println("Arjun");
         if (sc.next().toUpperCase().equals("Y")) {
-        	//System.out.println("kya karu haan crazy");
+        	
         	return true;
         }
         else {
-        	//System.out.println("mein hun aadat sey majbur");
+        	
         	return false;
         }
     }
@@ -194,12 +202,12 @@ public static void main(String[] args) throws Exception, IOException {
 		
 		if(ID<=9 && ID>=1) {
 			System.out.println("Information for Shows Times are:");
-			System.out.println("__________________________________");
+			System.out.println("_____________________________________________________________");
 			for(int j=0; j< arr_Screen[ID-1].get_no_Show_time(); j++) {
-				System.out.print("ID:	"+ arr_Screen[ID-1].arr_Show_time[j].get_ID()+"; ");
-				System.out.print("movie: "+ arr_Screen[ID-1].arr_Show_time[j].get_movie()+"; ");
-				System.out.print("Date: "+ arr_Screen[ID-1].arr_Show_time[j].get_date()+"; ");
-				System.out.print(" Time: "+ arr_Screen[ID-1].arr_Show_time[j].get_time()+"; ");
+				System.out.print("Show Time ID:	"+ arr_Screen[ID-1].arr_Show_time[j].get_ID()+"  ");
+				System.out.print("movie: "+ arr_Screen[ID-1].arr_Show_time[j].get_movie()+"  ");
+				System.out.print("Date: "+ arr_Screen[ID-1].arr_Show_time[j].get_date()+"  ");
+				System.out.print(" Time: "+ arr_Screen[ID-1].arr_Show_time[j].get_time()+"  ");
 				System.out.println();
 			}
 		}
