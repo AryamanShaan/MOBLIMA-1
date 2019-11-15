@@ -30,7 +30,7 @@ public class MovieDetails {
             	flag = 1;
             	System.out.println("The movie details are as follows:");
 				System.out.println("Movie name: "+x[0]);
-				if(x[1]=="true") {
+				if(x[1].equals("true")) {
 					System.out.println("3D or no?: Yes");
 				}
 				else {
