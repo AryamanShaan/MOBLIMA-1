@@ -28,8 +28,8 @@ public class Review {
         while((line = bufferedReader.readLine()) != null) {
             //System.out.println(line);
             String[] x = line.split(",");
+	    movies.put(i, x[0]);
             System.out.println(i++ +". " + x[0]);
-        	movies.put(i, x[0]);
         }   
         bufferedReader.close();
         System.out.print("Enter the movie you want to write a review for: ");
