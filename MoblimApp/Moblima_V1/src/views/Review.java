@@ -11,8 +11,18 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/**
+ * Obatin the ratings for a movie by a user and input them in a txt
+ * @author Anon
+ *
+ */
 public class Review {
-
+	
+	/**
+	 * The main function for this view
+	 * @param args for the main function
+	 * @throws Exception to throw the exception
+	 */
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("-----------------------------------");
