@@ -178,6 +178,10 @@ public static void main(String[] args) throws Exception {
 			book.computeTotalPrice();
 			writeScreen();
 		}
+		else {
+			System.out.println();
+			System.out.println("Such a Screen ID or Show Time ID does not exist, please try again!!");
+		}
 		
 	}
 
