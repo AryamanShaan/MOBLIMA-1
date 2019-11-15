@@ -79,7 +79,8 @@ public class Booking {
     	System.out.println("RECEIPT");
     	System.out.println();
     	System.out.println("Customer Name     : "+ customer.getName());
-    	System.out.println("Customer Mobile No: "+ customer.getAge());
+    	System.out.println("Customer Age      : "+ customer.getAge());
+    	System.out.println("Customer Mobile No: "+ customer.getMobile());
         System.out.println("Movie             : "+movie);
         System.out.println("Cinema            : " + screen_id + " ("      + cineplex + ")");
         System.out.println("Showing on        : " + date);
