@@ -22,8 +22,9 @@ public class UserFunctions {
 				System.out.println("3. Check seat availability, book and purchase tickets");
 				System.out.println("4. View Booking History");
 				System.out.println("5. List top 5 ranking by overall rating");
-				System.out.println("6. Go Back");
-				System.out.println("7. Exit");
+				System.out.println("6. Enter rating for a movie");
+				System.out.println("7. Go Back");
+				System.out.println("8. Exit");
 				System.out.print("Please enter your choice: ");
 				choice = sc.nextInt();
 				System.out.println();
@@ -39,9 +40,11 @@ public class UserFunctions {
 				BookingHistory.main(null);
 			}else if(choice == 5) {
 				Top5List.main(null);
-			}else if(choice == 6){
+			}else  if(choice == 6) {
+				Review.main(null);
+			}else if(choice == 7){
 				Main.main(null);
-			}else if(choice == 7) {
+			}else if(choice == 8) {
 				exit = 1;
 			}
 		}
