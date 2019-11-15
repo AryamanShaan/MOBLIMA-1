@@ -2,21 +2,57 @@ package models;
 
 import java.util.*;
 
+/**
+ * Represents the Cineplex
+ * @author Anon
+ *
+ */
 public class Cineplex {
 	
-	//declaring variables
-	private String location; //location of the cineplex
+	/**
+	 * Location of the cineplex
+	 */
+	private String location;
+	
+	/**
+	 * The screen number
+	 */
 	private int screen;
-	/*
-	Screen array or object, needs to be decided by shaan
-	*/
-	private String memberLevel; //membership level eg: Platinum, Gold etc. is provided as String
-	private String movieType; //type pf movie eg: Blockbuster etc. is provided as String
+	
+	/**
+	 * Level of membership - Gold, Platinum etc.
+	 */
+	private String memberLevel;
+	
+	/**
+	 * Type of movie - 3D, Blockbuster etc.
+	 */
+	private String movieType;
+	
+	/**
+	 * Whether it is a holiday or not
+	 */
 	private boolean holiday;
-	private String category; //category of movie-goer eg:adult etc. also provided as a String
+	
+	/**
+	 * Category of the movie goer - adult, child etc.
+	 */
+	private String category;
+	
+	/**
+	 * price for the ticket
+	 */
 	private int price = 0;
 	
-	//constructor for initialization
+	/**
+	 * Creates a cineplex with the given specifications
+	 * @param location location of the cineplex
+	 * @param screen screen number in the cineplex
+	 * @param memberLevel level of membership
+	 * @param movieType type of movie
+	 * @param holiday whether holiday or not
+	 * @param category category of movie goer
+	 */
 	public Cineplex(String location, int screen, String memberLevel, String movieType, boolean holiday, String category) {
 		this.location = location;
 		this.screen = screen;
@@ -26,37 +62,59 @@ public class Cineplex {
 		this.category = category;
 	}
 	
-	//function to return location
+	/**
+	 * Gets location of the cineplex
+	 * @return location of the cineplex
+	 */
 	public String getLocation() {
 		return location;
 	}
 	
-	//function to return screen number
+	/**
+	 * Gets screen number in the cineplex
+	 * @return the screen number
+	 */
 	public int getScreen() {
 		return screen;
 	}
 	
-	//function to return level of membership
+	/**
+	 * Get the membership level
+	 * @return the membership level
+	 */
 	public String getMemberLevel() {
 		return memberLevel;
 	}
 	
-	//function to return type of the movie
+	/**
+	 * Get movie type - 3D, blockbuster etc.
+	 * @return the type of the movie
+	 */
 	public String getMovieType() {
 		return movieType;
 	}
 	
-	//function to return whether holiday or not
+	/**
+	 * Get holiday or not
+	 * @return whether holiday or not
+	 */
 	public boolean getHoliday() {
 		return holiday;
 	}
 	
-	//function to return age category
+	/**
+	 * Get the category of movie goer
+	 * @return the category of the movie goer
+	 */
 	public String getCategory() {
 		return category;
 	}
 	
-	//function to return base price based on member_level
+	/**
+	 * Get base price based on membership level
+	 * @param memberLevel level of membership
+	 * @return base price based on membership level
+	 */
 	private int getBasePriceMemberLevel(String memberLevel) {
 		if(memberLevel.equals("Member")) {
 			return 20;
@@ -68,7 +126,11 @@ public class Cineplex {
 		return 5;
 	}
 	
-	//function to return base price based on movie type
+	/**
+	 * Get base price based on type of movie
+	 * @param movieType type of the movie
+	 * @return the base price based on movie type
+	 */
 	private int getBasePriceMovieType(String movieType) {
 		if(movieType.equals("Blockbuster")) {
 			return 8;
@@ -78,7 +140,11 @@ public class Cineplex {
 		return 5;
 	}
 	
-	//function to return base price based on whether a holiday or not
+	/**
+	 * Get base price based on holiday
+	 * @param holiday whether holiday or not
+	 * @return base price based on whether holiday or not
+	 */
 	private int getBasePriceHoliday(boolean holiday) {
 		if(holiday) {
 			return 10;
@@ -86,7 +152,11 @@ public class Cineplex {
 		return 5;
 	}
 	
-	//function to return base price based on age category
+	/**
+	 * Get base price based on category of movie goer
+	 * @param category category of the movie goer
+	 * @return base price based on category of the movie goer
+	 */
 	private int getBasePriceCategory(String category) {
 		if(category.equals("Adult")) {
 			return 15;
@@ -95,9 +165,16 @@ public class Cineplex {
 		}
 		return 10;
 	}
-	
-	//function to return total ticket cost, which makes use of helper functions defined above
+	/**
+	 * calculate total base price
+	 * @param memberLevel level of membership
+	 * @param movieType type of the movie - 3D, Blockbuster
+	 * @param holiday whether holiday or not
+	 * @param category category of movie goer - adult, child etc.
+	 * @return
+	 */
 	public int getTicketPrice(String memberLevel, String movieType, boolean holiday, String category) {
 		return (getBasePriceMemberLevel(memberLevel) + getBasePriceMovieType(movieType) + getBasePriceHoliday(holiday) + getBasePriceCategory(category)); 
 	}
 }
+
