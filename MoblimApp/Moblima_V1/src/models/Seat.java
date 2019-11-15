@@ -2,7 +2,7 @@ package models;
 
 /**
  * Represents a seat
- * @author Shaan
+ * @author Anon
  *
  */
 public class Seat implements java.io.Serializable{
