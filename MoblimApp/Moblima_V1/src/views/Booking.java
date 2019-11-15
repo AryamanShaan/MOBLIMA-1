@@ -121,7 +121,7 @@ public class Booking {
         TID = cineplex.toUpperCase().substring(0,3)+new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
     }
     
-    public void computeTotalPrice() {
+    public void computeTotalPrice() throws IOException {
     
         if (customer.isSeniorCitizen()) basePrice *= 0.5;
         else if (customer.isStudent()) basePrice *= 0.8;
@@ -132,18 +132,15 @@ public class Booking {
         if (customer.isStudent()) {
         	System.out.println("20% off for students");
         }
-//        if (is3D) {
-//        	basePrice = basePrice + 2;
-//        	System.out.println("3D Screen Price = 2");
-//        }
+
         
         System.out.println("Payment:-");
         System.out.println();
         System.out.println("Ticket base price : " + basePrice);
         System.out.println("Booking fee       : 2.0");
-        if (is3D) 
+        if (Movie.check3D(movie)) 
         {
-        	System.out.println("3D Screen price   : 2.0");
+        	System.out.println("3D Movie price    : 2.0");
         }
         if(0 < row && row < 4) 
         {
@@ -160,7 +157,7 @@ public class Booking {
         	seatChoice = 0.5;
         	System.out.println("Silver Seat Price : 0.5");
         }
-        if(is3D) price3D = 2;
+        if(Movie.check3D(movie)) price3D = 2;
         totalPrice = round(basePrice + 2 + GST + price3D +seatChoice, 2);
         System.out.println("GST               : " + GST);
         System.out.println("Grand total       : " + totalPrice);
@@ -168,7 +165,7 @@ public class Booking {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("PLEASE CARRY A COPY OF THIS RECEIPT AND ËNJOY YOUR MOVIE");
+        System.out.println("PLEASE CARRY A COPY OF THIS RECEIPT AND Ã‹NJOY YOUR MOVIE");
         System.out.println("_____________________________________________________________");
         
     }
