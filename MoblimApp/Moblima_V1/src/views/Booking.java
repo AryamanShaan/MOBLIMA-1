@@ -32,17 +32,17 @@ public class Booking {
     private int price3D =0;
     
    
-    public Booking(int row, int col, String movie , int screen_id, boolean isScreen3d1, String date) throws ParseException, IOException {
+    public Booking(int row, int col, String movie , int screen_id, boolean isScreen3d1, String date, String cineplex) throws ParseException, IOException {
         this.row = row;
         this.col = col;
         basePrice = 10;
         this.movie = movie;
         this.screen_id = screen_id;
         this.date = date;
-        this.is3D = isScreen3d1; ;
+        this.is3D = isScreen3d1; 
+        this.cineplex = cineplex;
         computeBasePrice();
     }
-    
     
     public void computeBasePrice() throws ParseException, IOException {
     	
@@ -79,7 +79,7 @@ public class Booking {
     	System.out.println("Customer Name     : "+ customer.getName());
     	System.out.println("Customer Mobile No: "+ customer.getAge());
         System.out.println("Movie             : "+movie);
-        System.out.println("Cinema            : " + screen_id + " (" + cineplex + ")");
+        System.out.println("Cinema            : " + screen_id + " ("      + cineplex + ")");
         System.out.println("Showing on        : " + date);
         System.out.println("Seat              : Row " + row + " Col " +  col);
         System.out.println("Ticket type       : " + ticketType);
