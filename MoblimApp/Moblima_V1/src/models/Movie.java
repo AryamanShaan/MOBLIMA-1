@@ -92,6 +92,26 @@ public class Movie {
 		return this.movieSales;
 	}
 	
+	public boolean check3D(String a) throws IOException {
+		String fileName = "Movie.txt";
+		String line;
+		FileReader fileReader = new FileReader(fileName);
+        BufferedReader bufferedReader = new BufferedReader(fileReader); 
+        while((line = bufferedReader.readLine()) != null) {
+            //System.out.println(line);
+            String[] x = line.split(",");
+            if(x[0].equals(a)) {
+            	if(x[1].equals("true"))
+            		return true;
+            	else
+            		return false;
+            	}
+            }
+        bufferedReader.close();
+		
+		return false;
+	}
+	
 	public void writeMovie() throws IOException{
 		String cast= String.join(",", this.getMovieCast());
 		String Save = this.getMovieName() + ","+ this.is3D + "," + this.getMovieType() + "," + this.getMovieStatus() + "," + this.getMovieRating() + "," + this.getMovieSynopsis() + "," + this.getMovieDirector() + "," + cast;
