@@ -1,19 +1,47 @@
 package models;
 
-
+/**
+ * Represents a particular Screen (Cinema)
+ * 
+ * @author Anon
+ *
+ */
 public class Screen implements java.io.Serializable{
 	
-	
+	/**
+	 * This is Screen ID
+	 */
 	private int screenID;
+	
+	/**
+	 * This indicates whether Screen is 3D or not
+	 */
 	private boolean is3D;
+	
+	/**
+	 * This indicates cineplex of the Screen
+	 */
 	private String cineplex;    // chaneg to objec reference later
+	
+	/**
+	 * This indicates Number of Show Times at the Screen at the given point of Time
+	 */
 	private int no_Show_time;   // keeps a track of how many show_times are there in a screen
 								// also helps assigning show_time IDs
 								// need to add error handling for no_Show_time > 100
+	/**
+	 * This is an array that holds all Show Time objects belonging to this Screen
+	 */
 	public ShowTime[] arr_Show_time = new ShowTime[100];
 	
 	
-	
+		/**
+	 * Constructor for Screen
+	 * 
+	 * @param sID  The ID of the Screen
+	 * @param is3  Boolean indicates whether Screen is 3d or not
+	 * @param cp   Cineplex of this Screen
+	 */
 	public Screen(int sID, boolean is3, String cp) {     		//constructor
 		
 		screenID = sID;
@@ -27,40 +55,76 @@ public class Screen implements java.io.Serializable{
 		
 	}
 	
-	
+	/**
+	 * Gets the screen ID
+	 * 
+	 * @return  this Screen's ID
+	 */
 	public int get_screenID() {
 		return screenID;
 	}
 	
+	/**
+	 * Sets this Screens' ID
+	 * 
+	 * @param n  Screen ID
+	 */
 	public void set_screenID(int n) {				// needed?
 		screenID = n;
 	}
 	
+	/**
+	 * Gets the Screen's type
+	 * 
+	 * @return the screen's type
+	 */
 	public boolean get_screenType() {
 		return is3D;
 	}
 	
-	
+	/**
+	 * Sets this screen's type
+	 * @param s the screen type
+	 */
 	public void set_screenType(boolean s) {			
 		is3D = s;
 	}
 	
+	/**
+	 * Gets the cineplex of this Screen
+	 * 
+	 * @return the cineplex 
+	 */
 	public String get_cineplexType() {
 		return cineplex;
 	}
 	
-	
+	/**
+	 * Sets the cineplex of this Screen
+	 * @param s the cineplex 
+	 */
 	public void set_cineplexType(String s) {			
 		cineplex = s;
 	}
 	
 	
-	
+	/**
+	 * gets the number of Show Time of the Screen present at that time
+	 * 
+	 * @return  number of Show Time of the Screen present at that time
+	 */
 	public int get_no_Show_time() {   				// very important 
 		return no_Show_time;
 	}
 	
-	
+	/**
+	 * Creates a Show Time for this Screen
+	 * 
+	 * @param ID      Screen ID
+	 * @param m		  Movie playing at this Show Time
+	 * @param date    Date of the Show Time
+	 * @param t       Time of this Show TIme
+	 */
 	public void creatShowtime(int ID, String m, String date, int t){	//new show_time in screen as long as screen is not maxed out
 		
 		if(no_Show_time < 100){
@@ -73,7 +137,11 @@ public class Screen implements java.io.Serializable{
 		
 	}
 	
-	
+	/**
+	 * Deletes the Show Time of this ID of this particular screen
+	 * 
+	 * @param ID   Show Time ID
+	 */
 	public void deleteShowtime(int ID) {
 		int i;
 		for(i=0; i< no_Show_time; i++) {
