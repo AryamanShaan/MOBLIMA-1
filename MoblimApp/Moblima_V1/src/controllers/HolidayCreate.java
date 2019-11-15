@@ -3,7 +3,12 @@ package controllers;
 
 import java.io.*;
 
-
+/**
+ * This class is a part of controller package that 
+ * writes the Holiday parameters into the Holiday.txt file.
+ * @author Anon
+ *
+ */
 
 public class HolidayCreate {
 	public static void writeHoliday(String name, String date) throws Exception {
