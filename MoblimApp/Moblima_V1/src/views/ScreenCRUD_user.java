@@ -90,6 +90,7 @@ public static void main(String[] args) throws Exception {
 		for(i=0; i< no_Screen; i++) {
 			
 			if(arr_Screen[i].get_no_Show_time()!=0) {
+				System.out.println();
 				System.out.println("Show Times for Screen ID: "+(i+1)+ " are: ");
 				System.out.println("---------------------------------------------------------");
 				
