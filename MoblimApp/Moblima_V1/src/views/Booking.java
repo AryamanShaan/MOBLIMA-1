@@ -13,27 +13,110 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
+/**
+ * This view governs the logic behind pricing of tickets
+ * @author Anon
+ *
+ */
 public class Booking {
+	/**
+	 * This is the object of class Customer who is booking the ticket
+	 */
+	private Customer customer;
+	
+	/**
+	 * This is a Date object indicating the Date of the show for which movie ticket is being booked 
+	 */
+	private Date date2;
+	
+	/**
+	 * Ticket type showing Weeekday, Weekend or Public Holiday 
+	 */
     private String ticketType;
-    private double basePrice;
+    
+    /**
+     * Movie for which the ticket is booked
+     */
     private String movie;
+    
+    /**
+     * Date of the show in the form of a string
+     */
     private String date;
-    private int screen_id;
+    
+    /**
+     * Cineplex to which the screen belongs
+     */
     private String cineplex;
+    
+    /**
+     * Transaction ID for each ticket
+     */
     private String TID;
+    
+    /**
+     * Baseprice of the ticket
+     */
+    private double basePrice;
+    
+    /**
+     * GST cost for each ticket
+     */
     private double GST;
+    
+    /**
+     * Total price for each ticket
+     */
     private double totalPrice;
-    private int row;
-    private int col;
-    private Date date2;
-    private Customer customer;
-    private int age;
-    private boolean is3D;
-    private int price3D =0;
+    
+    /**
+     * Price for ticket based on its criteria of Platinum, Gold or Silver
+     */
     private double seatChoice = 0;
     
+    /**
+     * Price for movie based on whether it is 3D or not
+     */
+    private int price3D =0;
     
-   
+    /**
+     * Unique screen ID for each Screen
+     */
+    private int screen_id;
+    
+    /**
+     * Row number for which the ticket is booked
+     */
+    private int row;
+    
+    /**
+     * Column number for which the ticket is booked
+     */
+    private int col;
+    
+    /**
+     * Age of the customer
+     */
+    private int age;
+    
+    /**
+     * Variable indicating if the movie is 3D
+     */
+    private boolean is3D;
+	
+    /**
+     * Creates a Booking object with the following parameters
+     * @param row Row of the seat being booked
+     * @param col Column of the seat being booked 
+     * @param movie Movie for which the ticket is being booked
+     * @param screen_id Screen ID for which the ticket is being booked
+     * @param isScreen3d1 Variable checking if movie is 3D
+     * @param date Date as String for which ticket is being booked 
+     * @param cineplex Cineplex at which the movie would be shown
+     * @throws ParseException
+     * @throws IOException
+     */
+    
     public Booking(int row, int col, String movie , int screen_id, boolean isScreen3d1, String date, String cineplex) throws ParseException, IOException {
         this.row = row;
         this.col = col;
@@ -46,6 +129,13 @@ public class Booking {
         computeBasePrice();
     }
     
+     /**
+     * This function calculates price based on the date 
+     * on which the show would be shown
+     * @throws ParseException
+     * @throws IOException
+     */
+	
     public void computeBasePrice() throws ParseException, IOException {
     	
     	
@@ -73,6 +163,9 @@ public class Booking {
         }
       }
     
+     /**
+     * This function prints the Final Ticket Receipt
+     */
 
     public void printBookingDetail() {
     	System.out.println("_____________________________________________________________");
@@ -90,7 +183,10 @@ public class Booking {
         System.out.println();
     }
     
-    
+    /**
+     * This function asks the user for its information
+     * @throws IOException
+     */
     
     public void promptCustomerInformation() throws IOException{
     	Scanner sc = new Scanner(System.in);
@@ -115,12 +211,19 @@ public class Booking {
         
     }
     
-    
+     /**
+     * This function generates the Transaction ID for each ticket
+     */
     public void generateTID() {
     	Random r = new Random();
         TID = cineplex.toUpperCase().substring(0,3)+new SimpleDateFormat("yyyyMMddHHmm").format(new Date());
     }
     
+     /**
+     * This function computes and prints total price of the 
+     * ticket based on date of show, age of user,  class 
+     * of seat selected, whether the movie is 3D, GST.
+     */
     public void computeTotalPrice() throws IOException {
     
         if (customer.isSeniorCitizen()) basePrice *= 0.5;
@@ -170,24 +273,49 @@ public class Booking {
         
     }
     
+    /**
+     * This is a function defined to print a message and 
+     * read in the corresponding entry by user 
+     * @param message Message that is shown on the screen
+     * @return Value entered by the user
+     */	
     public static String readString(String message) {
         System.out.println(message);
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
+	
     
+    /**
+     * This function calculates if the user is a 
+     * senior citizen on the basis of age entered
+     * @param age Age of the user
+     * @return boolean variable indicating if the user is senior citizen
+     */
     public static boolean ConfirmSeniorCitizen(int age) {
       
       if(age>60) return true;
       else return false;
      }
     
+    /**
+     * This function calculates if the user is a 
+     * student on the basis of age entered
+     * @param age Age of the user
+     * @return boolean variable indicating if the user is senior citizen
+     */	
     public static boolean ConfirmStudent(int age) {
         
         if(age>8 && age<25) return true;
         else return false;
      }
     
+     /**
+     * This is a function used to round up values computed
+     * @param value The original value
+     * @param places Number of decimal places to which the value should be rounded up to 
+     * @return final value after rounding up
+     */	
     public static double round(double value, int places) {
         if (places < 0) throw new IllegalArgumentException();
 
@@ -197,7 +325,11 @@ public class Booking {
     }
    
     
-    
+     /**
+     * This function writer the data of the user into the BookingHistory.txt File
+     * @param cust User who booked the ticket
+     * @throws IOException
+     */
 	public void writeBookingHistory(Customer cust) throws IOException{
 		try {
 			File file = new File("BookingHistory.txt");
