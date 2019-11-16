@@ -1,9 +1,0 @@
-7243,Divyesh,18,12-25-2019,Inception,divyesh01@gmail.com,96122779
-1237,Shaan,19,03-04-2019,The Wild Bunch,shaan08@gmail.com,89563278
-7217,Arjun,18,03-04-2019,Vertigo,arjun@gmail.com,91212385
-5516,Divvij,19,03-04-2019,The Wild Bunch,divvij@gmail.com,54683267
-3064,Divyesh,18,03-04-2019,The African Queen,divyesh01@gmail.com,96122779
-3788,Shaan,19,03-04-2019,Inception,shaan08@gmail.com,89563278
-6586,Ritik,22,12-12-2019,Superman,ritik03@gmail.com,90046143
-7636,Divyesh,18,12-12-2019,The African Queen,divyesh01@gmail.com,96122779
-6697,Puneet,12,03-06-2019,Vertigo,puns@gmail.com,56892561
