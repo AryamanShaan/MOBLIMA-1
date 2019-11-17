@@ -175,7 +175,7 @@ public class Booking {
     	System.out.println("Customer Age      : "+ customer.getAge());
     	System.out.println("Customer Mobile No: "+ customer.getMobile());
         System.out.println("Movie             : "+movie);
-        System.out.println("Cinema            : " + screen_id + " ("      + cineplex + ")");
+        System.out.println("Cinema            : " + screen_id + " (" + cineplex + ")");
         System.out.println("Showing on        : " + date);
         System.out.println("Seat              : Row " + row + " Col " +  col);
         System.out.println("Ticket type       : " + ticketType);
@@ -268,7 +268,7 @@ public class Booking {
         System.out.println();
         System.out.println();
         System.out.println();
-        System.out.println("PLEASE CARRY A COPY OF THIS RECEIPT AND Ã‹NJOY YOUR MOVIE");
+        System.out.println("PLEASE CARRY A COPY OF THIS RECEIPT AND ENJOY YOUR MOVIE");
         System.out.println("_____________________________________________________________");
         
     }

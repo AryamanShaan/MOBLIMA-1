@@ -10,9 +10,9 @@ import java.util.*;
 public class AdminFunctions {
 	/**
 	 * Main function driving the view
-	 * @param args: null used to call the function
-	 * @throws IOException: Throws IOException
-	 * @throws Exception: Throws IOException
+	 * @param args null used to call the function
+	 * @throws IOException Throws IOException
+	 * @throws Exception Throws IOException
 	 */
 	public static void main(String[] args) throws IOException,Exception {
 		

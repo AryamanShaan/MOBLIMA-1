@@ -8,9 +8,9 @@ import java.io.*;
 public class HolidayCreate {
 	/**
 	 * Recording the holiday into the database
-	 * @param name: Name of the holiday
-	 * @param date: Date of the holiday
-	 * @throws Exception: Throws Exception
+	 * @param name Name of the holiday
+	 * @param date Date of the holiday
+	 * @throws Exception Throws Exception
 	 */
 	public static void writeHoliday(String name, String date) throws Exception {
 		String save = name + "," + date;

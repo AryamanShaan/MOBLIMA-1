@@ -9,9 +9,9 @@ import java.util.*;
 public class SystemSettings {
 	/**
 	 * main function driving the view
-	 * @param args: null argument can be used to call the function
-	 * @throws IOException: Throws IOException
-	 * @throws Exception: Throws Exception
+	 * @param args null argument can be used to call the function
+	 * @throws IOException 
+	 * @throws Exception 
 	 */
 	public static void main(String[] args) throws IOException, Exception {
 		Scanner sc = new Scanner(System.in);

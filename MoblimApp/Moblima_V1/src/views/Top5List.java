@@ -97,7 +97,7 @@ public class Top5List {
 		//remaining printing
 		for(int i = 0; i < 5; i++) {
 			System.out.print(max_rating_movies[i] + " : ");
-			System.out.println(max_ratings[i]); 
+			System.out.printf("%.2f", max_ratings[i]); System.out.println(); 
 		}
 		System.out.println();
 	}

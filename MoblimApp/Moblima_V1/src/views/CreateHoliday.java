@@ -12,7 +12,7 @@ public class CreateHoliday {
 	/**
 	 * Function to check if a date entered is valid
 	 * @param strDate: Date to be validated
-	 * @return: Boolean value depicting if the date is valid or not
+	 * @return Boolean value depicting if the date is valid or not
 	 */
 	public static boolean validateJavaDate(String strDate)
 	   {
@@ -49,8 +49,8 @@ public class CreateHoliday {
 	   }
 	/**
 	 * Driver function of the view
-	 * @param args: null argument used to start the view
-	 * @throws Exception: Throws Exception
+	 * @param args null argument used to start the view
+	 * @throws Exception Throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
 		Scanner sc = new Scanner(System.in);

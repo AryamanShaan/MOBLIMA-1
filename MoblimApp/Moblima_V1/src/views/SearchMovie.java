@@ -12,9 +12,18 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.Scanner;
-
+/**
+ * View for searching a movie
+ * @author Anon
+ *
+ */
 public class SearchMovie {
-
+	/**
+	 * 
+	 * @param args null argument can be used to drive the function
+	 * @throws IOException Throws IOException
+	 * @throws Exception Throws Exception
+	 */
 	public static void main(String[] args) throws IOException, Exception {
 		Scanner in = new Scanner(System.in);
         String fileName = "Movie.txt";

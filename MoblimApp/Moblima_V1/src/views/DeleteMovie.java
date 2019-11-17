@@ -3,7 +3,7 @@ import java.io.*;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
-import java.util.*;
+import java.util.*;	
 /**
  * View for deleting a movie
  * @author Anon
@@ -12,9 +12,9 @@ import java.util.*;
 public class DeleteMovie {
 	/**
 	 * Main function driving the view
-	 * @param args: null argument can be used to drive the view
-	 * @throws IOException: Throws IOException
-	 * @throws Exception: Throws Exception
+	 * @param args null argument can be used to drive the view
+	 * @throws IOException Throws IOException
+	 * @throws Exception Throws Exception
 	 */
 	public static void main(String[] args) throws IOException, Exception {
 		Scanner in = new Scanner(System.in);
@@ -69,14 +69,16 @@ public class DeleteMovie {
     			pr.close();
     			br.close();
     			fr.close();
-    			
+    			Files.deleteIfExists(Paths.get("Movie.txt")); 
+    			/*
     			if(file_old.delete()){
     				   System.out.println();
     		           System.out.println("Movie deleted successfully!"); 
    		        } 
     		    else{ 
-    	            System.out.println("Error ..."); 
+    	            System.out.println("Error Not getting deleted ..."); 
    		        } 
+    			*/
     			Path source = Paths.get("MovieTemp.txt");
     			Files.move(source, source.resolveSibling("Movie.txt"));
     			AdminFunctions.main(null);

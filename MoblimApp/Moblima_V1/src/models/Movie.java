@@ -30,14 +30,14 @@ public class Movie {
 	
 	/**
 	 * Constructor of Movie Class
-	 * @param name: Name of the movie
-	 * @param type: Type of movie
-	 * @param status: Showing status of the movie
-	 * @param synopsis: Synopsis of the movie
-	 * @param director: Director of the movie
-	 * @param cast: Actors in the movie
-	 * @param rating: Age rating of the movie
-	 * @param x: Value depicting if the movie is 3D or not
+	 * @param name Name of the movie
+	 * @param type Type of movie
+	 * @param status Showing status of the movie
+	 * @param synopsis Synopsis of the movie
+	 * @param director Director of the movie
+	 * @param cast Actors in the movie
+	 * @param rating Age rating of the movie
+	 * @param x Value depicting if the movie is 3D or not
 	 */
 	public Movie(String name, String type, String status, String synopsis, String director, String[] cast, String rating, boolean x){
 		this.movieName = name;
@@ -52,14 +52,14 @@ public class Movie {
 	}
 	/**
 	 * Mutator of movieName
-	 * @param S: Movie name to be set
+	 * @param S Movie name to be set
 	 */
 	public void setMovieName(String S){
 		this.movieName = S;
 	}
 	/**
 	 * Accessor of movieName
-	 * @return: Returns name of the movie
+	 * @return Returns name of the movie
 	 */
 	public String getMovieName(){
 		return this.movieName;
@@ -67,28 +67,28 @@ public class Movie {
 	
 	/**
 	 * Mutator of movieType
-	 * @param S: Type to be assigned to the movie
+	 * @param S Type to be assigned to the movie
 	 */
 	public void setMovieType(String S){
 		this.movieType = S;
 	}
 	/**
 	 * Accessor of movieType
-	 * @return: Returns type of movie as String
+	 * @return Returns type of movie as String
 	 */
 	public String getMovieType(){
 		return this.movieType;
 	}
 	/**
 	 * Mutator of is3D
-	 * @param S: boolean value to be assigned
+	 * @param S boolean value to be assigned
 	 */
 	public void setis3D(boolean S){
 		this.is3D = S;
 	}
 	/**
 	 * Accessor of is3D
-	 * @return: Returns boolean value
+	 * @return Returns boolean value
 	 */
 	public boolean getis3D(){
 		return this.is3D;
@@ -96,14 +96,14 @@ public class Movie {
 	
 	/**
 	 * Mutator of movieStatus
-	 * @param S: Status of the movie to be set
+	 * @param S Status of the movie to be set
 	 */
 	public void setMovieStatus(String S){
 		this.movieStatus = S;
 	}
 	/**
 	 * Accessor of movieStatus
-	 * @return: Status to be assigned
+	 * @return Status to be assigned
 	 */
 	public String getMovieStatus(){
 		return this.movieStatus;
@@ -111,7 +111,7 @@ public class Movie {
 	
 	/**
 	 * Accessor of movieRating
-	 * @return: Returns the age restriction of the movie
+	 * @return Returns the age restriction of the movie
 	 */
 	public String getMovieRating(){
 		return this.movieRating;
@@ -120,14 +120,14 @@ public class Movie {
 	
 	/**
 	 * Mutator of movieSynopsis
-	 * @param S: Synopsis of the movie to be assigned
+	 * @param S Synopsis of the movie to be assigned
 	 */
 	public void setMovieSynopsis(String S){
 		this.movieSynopsis = S;
 	}
 	/**
 	 * Accessor of movieSynopsis
-	 * @return
+	 * @return Returns movie synopsis as a string
 	 */
 	public String getMovieSynopsis(){
 		return this.movieSynopsis;
@@ -135,14 +135,14 @@ public class Movie {
 	
 	/**
 	 * Mutator of movieDirector
-	 * @param S: Director to be set
+	 * @param S Director to be set
 	 */
 	public void setMovieDirector(String S){
 		this.movieDirector = S;
 	}
 	/**
 	 * Accessor of movieDirector
-	 * @return: Name of the movie director 
+	 * @return Name of the movie director 
 	 */
 	public String getMovieDirector(){
 		return this.movieDirector;
@@ -150,14 +150,14 @@ public class Movie {
 	
 	/**
 	 * Mutator of movieCast[]
-	 * @param S: All actors to be assigned to the movie
+	 * @param S All actors to be assigned to the movie
 	 */
 	public void setMovieCast(String[] S){
 		this.movieCast = S;
 	}
 	/**
 	 * Accessor of movieCast[]
-	 * @return: Returns all actors in the movie as an array of strings
+	 * @return Returns all actors in the movie as an array of strings
 	 */
 	public String[] getMovieCast(){
 		return this.movieCast;
@@ -165,11 +165,11 @@ public class Movie {
 	
 	/**
 	 * Function to check if a movie is 3D or not
-	 * @param a: Name of the movie being checked
-	 * @return: Returns boolean value depicting 3D attribute
-	 * @throws IOException: Throws IOEXception if file not found
+	 * @param a Name of the movie being checked
+	 * @return Returns boolean value depicting 3D attribute
+	 * @throws IOException Throws IOEXception if file not found
 	 */
-	public boolean check3D(String a) throws IOException {
+	public static boolean check3D(String a) throws IOException {
 		String fileName = "Movie.txt";
 		String line;
 		FileReader fileReader = new FileReader(fileName);
@@ -191,7 +191,7 @@ public class Movie {
 	
 	/**
 	 * Function to record movie into the database at the time of movie creation
-	 * @throws IOException: Throws IOException
+	 * @throws IOException Throws IOException
 	 */
 	public void writeMovie() throws IOException{
 		String cast= String.join(",", this.getMovieCast());

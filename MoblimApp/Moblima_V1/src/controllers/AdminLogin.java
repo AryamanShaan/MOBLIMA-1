@@ -9,8 +9,8 @@ import java.util.Scanner;
 public class AdminLogin {
 	/**
 	 * Function to check authenticity of the staff memeber
-	 * @param ID: ID of the admin
-	 * @param pass: Password for the account
+	 * @param ID ID of the admin
+	 * @param pass Password for the account
 	 * @return Flag indicating state of login 
 	 * @throws IOException Throws IOException
 	 */

@@ -16,4 +16,5 @@ West Side Story,Shaan,4.9
 West Side Story,Shaan,4.2
 The Wizard of Oz,Divvij,2.3
 Dracula,Divyesh,3.4
-Dracula
+Batman,Arjun,10.0
+The African Queen,Mohit,10.0

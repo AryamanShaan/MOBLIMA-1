@@ -1,3 +1,4 @@
+
 package views;
 import java.io.IOException;
 //import java.io.*;
@@ -11,9 +12,9 @@ import java.util.*;
 public class Main {
 	/**
 	 * main function driving the view
-	 * @param args: null argument can be used to call the view
-	 * @throws IOException: Throws IOException
-	 * @throws Exception: Throws Exception
+	 * @param args null argument can be used to call the view
+	 * @throws IOException Throws IOException
+	 * @throws Exception Throws Exception
 	 */
 	public static void main(String[] args) throws IOException, Exception {
 		

@@ -11,9 +11,9 @@ import controllers.*;
 public class CreateMovie {
 	/**
 	 * Main function to drive the view
-	 * @param args: null argument used to start the function
-	 * @throws IOException: Throws IOException
-	 * @throws Exception: Throws Exception
+	 * @param args null argument used to start the function
+	 * @throws IOException Throws IOException
+	 * @throws Exception Throws Exception
 	 */
 	public static void main(String[] args) throws IOException,Exception {
 		Scanner sc = new Scanner(System.in);

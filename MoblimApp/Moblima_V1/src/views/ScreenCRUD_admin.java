@@ -157,7 +157,7 @@ public static void main(String[] args) throws Exception, IOException {
 					else
 					{
 						if(choice == 1)
-							cp ="Cathay        ";
+							cp ="Cathay       ";
 						if(choice ==2)
 							cp = "Shaw Theatres";
 						if(choice ==3)

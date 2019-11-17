@@ -29,13 +29,14 @@ public class UserFunctions {
 				System.out.println("-----------------------------------");
 				System.out.println("User Module");
 				System.out.println("-----------------------------------");
-				System.out.println("1. Search for a movie");
-				System.out.println("2. View movie details (rating included)");
-				System.out.println("3. Check seat availability, book and purchase tickets");
-				System.out.println("4. View Booking History");
-				System.out.println("5. List top 5 ranking by overall rating");
-				System.out.println("6. Go Back");
-				System.out.println("7. Exit");
+				System.out.println("1. Search all movies");
+				System.out.println("2. Movie details");
+				System.out.println("3. Book seats");
+				System.out.println("4. History");
+				System.out.println("5. Top movies");
+				System.out.println("6. Movie review");
+				System.out.println("7. Go Back");
+				System.out.println("8. Exit");
 				System.out.print("Please enter your choice: ");
 				choice = sc.nextInt();
 				System.out.println();
@@ -51,14 +52,16 @@ public class UserFunctions {
 				BookingHistory.main(null);
 			}else if(choice == 5) {
 				Top5List.main(null);
-			}else if(choice == 6){
+			}else if(choice == 6) {
+				Review.main(null);
+			}else if(choice == 7){
 				Main.main(null);
-			}else if(choice == 7) {
-				exit = 1;
+			}else if(choice == 8) {
+				System.out.println("Thanks for using MOBLIMA!");
+				System.exit(0);
 			}
 		}
-		System.out.println("Thank you for using MOBLIMA!");
-		System.out.println();
+		
 	}
 
 }

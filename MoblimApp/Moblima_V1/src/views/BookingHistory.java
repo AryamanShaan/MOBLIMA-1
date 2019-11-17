@@ -34,9 +34,9 @@ public class BookingHistory {
 	            //System.out.println(line);
 	            String[] x = line.split(",");
 	            if(x[1].equals(choice)) {
-	            	System.out.println("TID: " + x[0]);
-	            	System.out.println("Email: " + x[2]);
-	            	System.out.println("Mobile: " + x[3]);
+	            	System.out.println("TID          : " + x[0]);
+	            	System.out.println("Age          : " + x[2]);
+	            	System.out.println("Date of Movie: " + x[3]);
 	            	System.out.println();
 	            }
 	        }  

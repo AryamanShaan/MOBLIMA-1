@@ -94,7 +94,7 @@ public class BookingHistory {
 
     /**
      * Sets the ticket price for the ticket being booked
-     * @param tid ticket price for the ticket being booked
+     * @param tp Ticket price for the ticket being booked
      */
     public void setTicketPrice(double tp){
         this.ticketPrice = tp;
@@ -102,7 +102,7 @@ public class BookingHistory {
 
     /**
      * Sets the user who is booking the tickets
-     * @param tid User who is booking the tickets
+     * @param us User who is booking the tickets
      */
     public void setUser(Customer us){
         this.user = us; 

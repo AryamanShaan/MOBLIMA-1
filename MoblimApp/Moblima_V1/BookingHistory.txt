@@ -4,6 +4,13 @@ CAT201908120723,Arjun,18,03-04-2019,Vertigo,arjun@gmail.com,91212385
 CAT201909150927,Divvij,19,03-04-2019,The Wild Bunch,divvij@gmail.com,54683267
 CAT201911171634,Divyesh,18,03-04-2019,The African Queen,divyesh01@gmail.com,96122779
 CAT201911151214,Shaan,19,03-04-2019,Inception,shaan08@gmail.com,89563278
-CAT201907121019,Ritik,22,12-12-2019,Superman,ritik03@gmail.com,90046143
+CAT201907121019,Ritik,22,12-12-2019,All About Eve,ritik03@gmail.com,90046143
 CAT201909101528,Divyesh,18,12-12-2019,The African Queen,divyesh01@gmail.com,96122779
 CAT201911061914,Puneet,12,03-06-2019,Vertigo,puns@gmail.com,56892561
+CAT201911161759,Shaan,19,08-09-2019,Trouble in Paradise,retyr,7890
+CAT201911161804,Mehul,19,11-19-2019,The African Queen,mehul@gmail.com,98103050
+J-C201911161812,Shaan,19,06-05-2019,The Wizard of Oz,shkjlfd,5454
+CAT201911161932,Patrick,20,11-19-2019,The African Queen,patrick@gmail.com,91212384
+CAT201911161948,Patrick,29,11-19-2019,The African Queen,patrick@gmail.com,91212384
+CAT201911162000,Mohit,23,11-19-2019,The African Queen,mohit@123.com,91212382
+CAT201911162025,Arjun,19,11-17-2019,Inception,arjunmann73@gmail.com,91212385

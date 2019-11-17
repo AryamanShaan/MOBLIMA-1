@@ -9,8 +9,8 @@ import java.util.*;
 public class MovieCRUD {
 	/**
 	 * main function driving the view
-	 * @param args: null argument can be used to call the function
-	 * @throws Exception: Throws Exception
+	 * @param args null argument can be used to call the function
+	 * @throws Exception Throws Exception
 	 */
 	public static void main(String[] args) throws Exception {
 		int choice = -1;

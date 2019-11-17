@@ -18,9 +18,9 @@ public class Admin {
 	
 	/**
 	 * Constructor of Admin class
-	 * @param id: ID of the Admin
-	 * @param pass: Password designated to the admim
-	 * @param name: Name of the admin
+	 * @param id ID of the Admin
+	 * @param pass Password designated to the admim
+	 * @param name Name of the admin
 	 */
 	public Admin(String id, String pass, String name){
 		this.adminID = id;
@@ -30,7 +30,7 @@ public class Admin {
 	
 	/**
 	 * Accessor of AdminID
-	 * @return: Returns the ID of the admin
+	 * @return Returns the ID of the admin
 	 */
 	public String getAdminId(){
 		return this.adminID;
@@ -46,7 +46,7 @@ public class Admin {
 	
 	/**
 	 * Accessor of AdminPass
-	 * @return: Returns admin password
+	 * @return Returns admin password
 	 */
 	public String getAdminPass(){
 		return this.adminPass;
@@ -60,7 +60,7 @@ public class Admin {
 	}
 	/**
 	 * Accessor of AdminName
-	 * @return: Returns the admin name
+	 * @return Returns the admin name
 	 */
 	public String getAdminName(){
 		return this.adminName;

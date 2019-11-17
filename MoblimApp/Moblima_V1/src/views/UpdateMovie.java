@@ -20,9 +20,9 @@ import java.util.Scanner;
 public class UpdateMovie {
 	/**
 	 * Main function driving the view
-	 * @param args: null argument driving the function
-	 * @throws IOException: Throws IOException
-	 * @throws Exception: Throws Exception
+	 * @param args null argument driving the function
+	 * @throws IOException Throws IOException
+	 * @throws Exception Throws Exception
 	 */
 	public static void main(String[] args) throws IOException, Exception {
 		Scanner in = new Scanner(System.in);
@@ -55,7 +55,7 @@ public class UpdateMovie {
             	MovieCRUD.main(null);
             }
             else {
-            	File file_old = new File(fileName);
+            	//File file_old = new File(fileName);
     			File file = new File("MovieTemp.txt");
     			FileWriter fr = new FileWriter(file, true);
     			BufferedWriter br = new BufferedWriter(fr);
@@ -203,6 +203,8 @@ public class UpdateMovie {
     			br.close();
     			fr.close();
     			
+    			Files.deleteIfExists(Paths.get("Movie.txt")); 
+    			/*
     			if(file_old.delete()){ 
     		           System.out.println("Movie updated successfully!");
     		           System.out.println();
@@ -210,6 +212,7 @@ public class UpdateMovie {
     		    else{ 
     	            System.out.println("Error ..."); 
    		        } 
+   		        */
     			Path source = Paths.get("MovieTemp.txt");
     			Files.move(source, source.resolveSibling("Movie.txt"));
     			AdminFunctions.main(null);
